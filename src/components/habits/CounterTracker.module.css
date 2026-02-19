@@ -1,0 +1,46 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.display {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.target {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

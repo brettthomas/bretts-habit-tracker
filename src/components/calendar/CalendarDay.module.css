@@ -1,0 +1,74 @@
+.empty {
+  aspect-ratio: 1;
+}
+
+.day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  position: relative;
+  background: rgba(168, 181, 162, var(--fill-opacity, 0));
+}
+
+.day:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--primary) 12%, white);
+  transform: scale(1.08);
+}
+
+.day:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.future {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.today {
+  box-shadow: inset 0 0 0 2px var(--primary);
+  font-weight: 700;
+}
+
+.today .number {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.selected {
+  background: color-mix(in srgb, var(--primary) 20%, white);
+  box-shadow: inset 0 0 0 2px var(--primary-dark);
+}
+
+.perfect {
+  background: color-mix(in srgb, var(--primary) 25%, white);
+}
+
+.perfect .number {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.number {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dots {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  bottom: 3px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5px rgba(0,0,0,0.1);
+}

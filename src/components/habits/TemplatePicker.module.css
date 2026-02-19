@@ -1,0 +1,71 @@
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.templateCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.templateCard:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 5%, white);
+}
+
+.templateCard:active {
+  transform: scale(0.97);
+}
+
+.templateIcon {
+  font-size: 28px;
+}
+
+.templateName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.templateDesc {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.scratchBtn {
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scratchBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}

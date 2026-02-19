@@ -1,0 +1,125 @@
+.card {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, white), color-mix(in srgb, var(--primary) 8%, white));
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, var(--border));
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dateRange {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overallPct {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.chevron {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.body {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trend {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.trendUp {
+  color: var(--primary-dark);
+}
+
+.trendDown {
+  color: var(--accent);
+}
+
+.narrative {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.starSection {
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--primary) 15%, var(--border));
+}
+
+.starValue {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attentionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.attentionItem {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.notesSection {
+  padding-top: 8px;
+  border-top: 1px solid color-mix(in srgb, var(--primary) 15%, var(--border));
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.noteItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.noteHabit {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.noteText {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text);
+}

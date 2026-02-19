@@ -1,0 +1,18 @@
+.header {
+  padding: 16px 20px 12px;
+  padding-top: calc(16px + var(--safe-top));
+  background: var(--cards);
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.date {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}

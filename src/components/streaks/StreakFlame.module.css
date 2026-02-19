@@ -1,0 +1,16 @@
+.flame {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.icon {
+  animation: flame-dance 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+.count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--streak-gold);
+}

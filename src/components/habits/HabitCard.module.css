@@ -1,0 +1,131 @@
+.card {
+  transition: all 0.3s;
+  border-left: 3px solid var(--habit-color);
+}
+
+.editable .info {
+  cursor: pointer;
+}
+
+.editable .info:hover .name {
+  color: var(--primary-dark);
+}
+
+.completed {
+  opacity: 0.75;
+  background: color-mix(in srgb, var(--habit-color) 5%, white);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.frequency {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Note section */
+.noteSection {
+  border-top: 1px solid color-mix(in srgb, var(--habit-color) 15%, var(--border));
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.noteText {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-secondary);
+  cursor: pointer;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.noteText:hover {
+  color: var(--text);
+}
+
+.addNoteBtn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.addNoteBtn:hover {
+  color: var(--primary-dark);
+}
+
+.noteInputRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.noteInput {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+}
+
+.noteInput:focus {
+  border-color: var(--primary);
+}
+
+.noteSave {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.noteCancel {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}

@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.reorderBtn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reorderBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.reorderActive {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.reorderActive:hover {
+  color: white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrowCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.arrowBtn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.arrowBtn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  background: color-mix(in srgb, var(--primary) 5%, white);
+}
+
+.arrowBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.cardWrap {
+  flex: 1;
+  min-width: 0;
+}

@@ -1,0 +1,18 @@
+.banner {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 15%, white), color-mix(in srgb, var(--primary) 5%, white));
+  border-color: var(--primary);
+  text-align: center;
+  animation: fade-in 0.4s ease;
+}
+
+.celebrate {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--streak-gold) 15%, white), color-mix(in srgb, var(--streak-gold) 5%, white));
+  border-color: var(--streak-gold);
+  animation: celebrate 0.5s ease;
+}
+
+.message {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
