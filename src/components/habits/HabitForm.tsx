@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { HabitFormData, Frequency, TrackingType } from '../../models/Habit.ts'
-import { HABIT_COLORS, FREQUENCY_OPTIONS, TRACKING_TYPE_OPTIONS } from '../../utils/constants.ts'
+import { HABIT_COLORS, FREQUENCY_OPTIONS, TRACKING_TYPE_OPTIONS, WATER_GOAL_OZ } from '../../utils/constants.ts'
 import { minutesToTime24, timeToMinutes } from '../../utils/timeUtils.ts'
 import { Button } from '../common/Button.tsx'
 import styles from './HabitForm.module.css'
@@ -86,7 +86,10 @@ export function HabitForm({ onSubmit, onCancel, initial }: HabitFormProps) {
               key={opt.value}
               type="button"
               className={`${styles.typeCard} ${trackingType === opt.value ? styles.typeCardActive : ''}`}
-              onClick={() => setTrackingType(opt.value)}
+              onClick={() => {
+                setTrackingType(opt.value)
+                if (opt.value === 'water') setTargetValue(WATER_GOAL_OZ)
+              }}
             >
               <span className={styles.typeName}>{opt.label}</span>
               <span className={styles.typeDesc}>{opt.description}</span>
@@ -129,6 +132,19 @@ export function HabitForm({ onSubmit, onCancel, initial }: HabitFormProps) {
             type="time"
             value={targetTime}
             onChange={e => setTargetTime(e.target.value)}
+          />
+        </div>
+      )}
+
+      {trackingType === 'water' && (
+        <div className={styles.field}>
+          <label className={styles.label}>Daily Water Goal (oz)</label>
+          <input
+            className={styles.input}
+            type="number"
+            min={1}
+            value={targetValue}
+            onChange={e => setTargetValue(Number(e.target.value))}
           />
         </div>
       )}

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useHabitContext } from '../context/HabitContext.tsx'
-import { WATER_BOTTLE_OZ, WATER_BOTTLE_COUNT, WATER_GOAL_OZ } from '../utils/constants.ts'
+import { WATER_BOTTLE_OZ, WATER_GOAL_OZ } from '../utils/constants.ts'
 
 export function useWaterTracker() {
   const { state, logCompletion } = useHabitContext()
@@ -16,9 +16,11 @@ export function useWaterTracker() {
     return completion?.value ?? 0
   }, [waterHabit, state.todayCompletions])
 
+  const goalOz = waterHabit?.goal?.targetValue ?? WATER_GOAL_OZ
+
   const bottlesFilled = Math.floor(currentOz / WATER_BOTTLE_OZ)
 
-  const bottleCount = Math.max(WATER_BOTTLE_COUNT, bottlesFilled)
+  const bottleCount = Math.max(Math.ceil(goalOz / WATER_BOTTLE_OZ), bottlesFilled)
 
   const toggleBottle = async (bottleIndex: number) => {
     if (!waterHabit) return
@@ -41,11 +43,11 @@ export function useWaterTracker() {
   return {
     waterHabit,
     currentOz,
-    goalOz: WATER_GOAL_OZ,
+    goalOz,
     bottlesFilled,
     bottleCount,
     toggleBottle,
     addExtraBottle,
-    isComplete: currentOz >= WATER_GOAL_OZ,
+    isComplete: currentOz >= goalOz,
   }
 }
